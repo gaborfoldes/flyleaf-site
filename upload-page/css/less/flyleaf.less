@@ -1,0 +1,82 @@
+
+body {
+padding-top: 0px;
+padding-bottom: 40px;
+background-color: @ffGreenLighter;
+}
+
+.top-bar {
+  background-color: @ffBackground;
+  height: 100px;
+  margin-bottom: @spaceLarge;
+  padding-top: @spaceLarge;
+  padding-bottom: @spaceMedium;
+  padding-left: 50px;
+}
+
+
+.flyleaf-pov {
+  background-color: @grayLighter;
+	border: 1px solid #ddd;
+	.border-radius(@borderRadiusLarge);
+	.box-shadow(0 1px 4px rgba(0,0,0,.065));
+  text-align: center;
+
+  .instruction-box {
+  	text-align: left;
+    background-color: @ffBackground;
+  	padding: @paddingLarge;
+  	height: 150px;
+  	border: 1px solid #ddd;
+  	.border-radius(@borderRadiusLarge);
+  	.box-shadow(0 1px 4px rgba(0,0,0,.065));
+  }
+
+  .top-large-space {
+	margin-top: @spaceLarge;
+  }
+
+  .bottom-large-space {
+  	margin-bottom: @spaceLarge;
+  }
+
+	
+  .header1 {
+	font-size: 40px;
+	line-height: 1;
+	margin: 10px;
+	}
+}
+
+.btn-upload {
+  	.buttonBackground(@ffbtnPrimaryBackground, @ffbtnPrimaryBackgroundHighlight);
+}
+
+
+
+// Flyleaf color scheme
+// -------------------------
+@ffBrownLighter:				#C09D7A;
+@ffBrownLight: 					#C09061;
+@ffBrown: 						#81562C;
+@ffBrownDark: 					#54310E;
+@ffBrownGrayish: 				#614931;
+@ffGreenLighter: 				#A1C782;
+@ffGreenLight: 					#93C769;
+@ffGreen: 						#5D8E35;
+@ffGreenDark: 					#335C11;
+@ffGreenGrayish: 				#4F6A38;
+@ffBackground:                  #F7F7F7;
+
+// Button colors
+// -------------------------
+@ffbtnPrimaryBackground: 			@ffGreenLight;
+@ffbtnPrimaryBackgroundHighlight:	@ffGreen;
+
+// Margin spacing
+// -------------------------
+@spaceLarge:          15px;
+@spaceMedium:         10px;
+@spaceSmall:          5px;
+
+
