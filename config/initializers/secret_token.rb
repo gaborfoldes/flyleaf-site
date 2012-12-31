@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-FlyleafSite::Application.config.secret_token = '9a914e20a1d6d70e59a7fe7be2a6ba9199697c6a258f92366968fbca037604c24bb4fc45454fdbb667f12a5ac3a6ec30e740b6da505ede345e8d4d787a11ff31'
+FlyleafSite::Application.config.secret_token = 'c6990945221eb7d21069a235e9335a81ce9da307dd580dfb1393d80367bbce01d195c56dbef57c3261d57c069c56d85723c3720e67f5af544c69fed18e2225e7'
