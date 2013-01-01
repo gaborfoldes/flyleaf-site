@@ -1,19 +1,47 @@
 
 body {
-padding-top: 0px;
-padding-bottom: 40px;
-background-color: @ffGreenLighter;
+  padding-top: 0px;
+  padding-bottom: 40px;
+  background-color: @ffBackground;
+  background-image: url('../img/paper/paper.png');
 }
 
 .top-bar {
-  background-color: @ffBackground;
   height: 100px;
   margin-bottom: @spaceLarge;
   padding-top: @spaceLarge;
   padding-bottom: @spaceMedium;
-  padding-left: 50px;
 }
 
+.upload-region{
+  background-color: @ffGreenLighter;
+  text-align: center;
+  color: @white;
+  padding-bottom: @spaceLarge;
+
+  .header1 {
+	font-size: 40px;
+	line-height: 1;
+	margin: 10px;
+	}
+
+  .instruction-box {
+  	text-align: left;
+    background-color: @ffGreenLighter;
+	color: @white;
+
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
+
+  	padding: @paddingSmall;
+  	height: 120px;
+  	border: 1px solid #ddd;
+  	.border-radius(@borderRadiusLarge);
+  	.box-shadow(0 1px 4px rgba(0,0,0,.065));
+  	margin-bottom: @spaceLarge;
+  }
+
+
+}
 
 .flyleaf-pov {
   background-color: @grayLighter;
@@ -21,17 +49,8 @@ background-color: @ffGreenLighter;
 	.border-radius(@borderRadiusLarge);
 	.box-shadow(0 1px 4px rgba(0,0,0,.065));
   text-align: center;
-
-  .instruction-box {
-  	text-align: left;
-    background-color: @ffBackground;
-  	padding: @paddingLarge;
-  	height: 150px;
-  	border: 1px solid #ddd;
-  	.border-radius(@borderRadiusLarge);
-  	.box-shadow(0 1px 4px rgba(0,0,0,.065));
-  }
-
+  height: 240px;
+  padding-top: 90px;
   .top-large-space {
 	margin-top: @spaceLarge;
   }
@@ -40,12 +59,6 @@ background-color: @ffGreenLighter;
   	margin-bottom: @spaceLarge;
   }
 
-	
-  .header1 {
-	font-size: 40px;
-	line-height: 1;
-	margin: 10px;
-	}
 }
 
 .btn-upload {
