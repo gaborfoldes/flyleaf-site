@@ -4,7 +4,7 @@ FlyleafSite::Application.routes.draw do
   root :to => "home#index"
 
   #redirect from shortener
-  match ':bookid' => redirect("http://read.flyleaf.me/a/%{bookid}"), :constraints => {:host => "flyle.af"}
+  match ':bookid' => redirect("http://read.flyleaf.me/view/%{bookid}"), :constraints => {:host => "flyle.af"}
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
