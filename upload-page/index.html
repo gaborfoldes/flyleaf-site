@@ -8,7 +8,7 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -26,7 +26,7 @@
   <body>
   <div class="row-fluid">
 	<div class="span12 top-bar">
-	  <div class = "container"><img src="/img/flyleaf_logo.png"></div>
+	  <div class = "container"><img src="img/flyleaf_logo.png"></div>
 	</div>
   </div>
 	
@@ -52,10 +52,7 @@
 		<div class = "row-fluid">
 		  <div class = "span1"></div>
 	 	  <div class = "span10 flyleaf-pov">
-			<%= form_tag({:action => :upload}, :multipart => true) do %>
- 			  <%= file_field_tag 'epub', :onchange => 'submit();' %>
-			  <button type='submit' class="btn btn-upload btn-large top-large-space bottom-large-space">Upload</a>
-			<% end %>
+			<a class="btn btn-upload btn-large top-large-space bottom-large-space">Upload content</a>
 		  </div>
 		  <div class = "span1"></div>
 		</div>
@@ -76,8 +73,8 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/js/jquery-1.8.3.min.js"></script>
-    <script src="/js/bootstrap.js"></script> 
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/bootstrap.js"></script> 
 
   </body>
 </html>

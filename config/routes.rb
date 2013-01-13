@@ -1,5 +1,6 @@
 FlyleafSite::Application.routes.draw do
   get "home/index"
+  post "home/upload"
 
   root :to => "home#index"
 
