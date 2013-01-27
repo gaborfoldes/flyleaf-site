@@ -1,0 +1,9 @@
+      <div class="row" id="cta">
+      	<div class="span12">
+			<%= form_tag({:action => :upload}, :multipart => true) do %>
+ 			  <%= file_field_tag 'epub', :accept => '.epub', :onchange => 'submit();', :style => 'display: none;' %>
+			<% end %>
+       	 <h1><a href="#" onclick="document.getElementById('epub').click();">Upload book <i class="icon-cloud-upload"></i> </a></h1>
+        </div><!--end span12-->        
+      </div><!--end row-->
+      

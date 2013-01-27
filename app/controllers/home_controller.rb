@@ -23,11 +23,14 @@ class HomeController < ApplicationController
       http.request(req)
     }
 
-    if res.body == 'OK' 
-    	puts shortened
-    end
+#    if res.body == 'OK' 
+#      @book_link = shortened
+#    else
+#      @error_code = "Failed to upload book!"
+#    end
 
-    redirect_to 'http://localhost:3001/view/' + shortened  #home_index_path
+    @book_link = shortened
+    render :index   #'http://localhost:3001/view/' + shortened  #home_index_path
 #    render :action => :index
   end
 
