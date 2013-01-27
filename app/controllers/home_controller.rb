@@ -5,8 +5,8 @@ class HomeController < ApplicationController
   def upload
 
     require 'net/http'
-    require 'SecureRandom'
-    require 'FileUtils'
+    require 'securerandom'
+    require 'fileutils'
 
     if Rails.env.development?
       @api_url = 'http://localhost:3001'
