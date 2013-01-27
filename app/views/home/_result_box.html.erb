@@ -3,7 +3,7 @@
       	  <h2>Success!</h2>
       	  <h4>
       	  	Read your book at:
-      	  	<%= link_to "flyle.af/" + @book_link, "http://localhost:3001/view/" + @book_link, :target => '_blank' %>
+      	  	<%= link_to "flyle.af/" + @book_link, @api_url + "/view/" + @book_link, :target => '_blank' %>
       	  </h4>
       	  <p><%= link_to "Upload another book", :home_index %></p>
         </div><!--end span12-->        

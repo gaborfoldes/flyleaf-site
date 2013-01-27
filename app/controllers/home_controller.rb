@@ -8,6 +8,13 @@ class HomeController < ApplicationController
     require 'SecureRandom'
     require 'FileUtils'
 
+    if Rails.env.development?
+      @api_url = 'http://localhost:3001'
+    else
+      @api_url = 'http://reader.flyleaf.me'
+    end
+
+
     uploaded_io = params[:epub]
     # uploaded_io.original_filename
     shortened = SecureRandom.urlsafe_base64(4)
@@ -17,7 +24,7 @@ class HomeController < ApplicationController
       file.write(uploaded_io.read)
     end
 
-    url = URI.parse('http://localhost:3001/load/' + shortened)
+    url = URI.parse(@api_url + '/load/' + shortened)
     req = Net::HTTP::Get.new(url.path)
     res = Net::HTTP.start(url.host, url.port) {|http|
       http.request(req)
@@ -30,8 +37,8 @@ class HomeController < ApplicationController
 #    end
 
     @book_link = shortened
-    render :index   #'http://localhost:3001/view/' + shortened  #home_index_path
-#    render :action => :index
+    render :index
+
   end
 
 end
