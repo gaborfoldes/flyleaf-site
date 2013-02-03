@@ -8,6 +8,10 @@ body {
   color: @gray;
 }
 
+a {color: @ffBrown;}
+a:hover {text-decoration: none; color: @ffBrownGrayish; }
+
+
 .top-bar {
   height: 80px;
 //  margin-bottom: @spaceLarge;
@@ -75,16 +79,16 @@ body {
 /*#header a{ display:block; width:129px; height:131px; background:url(../img/logo.png) no-repeat center; text-indent:-9999px; margin:0 auto;}
 */
 #cta a{
-  width:320px; display:block; background:#7abe63; margin:0 auto; color:#fff;padding:30px 0;
+  width:320px; display:block; background:lighten(@ffGreen,15%); margin:0 auto; color:#fff;padding:30px 0;  //#7abe63
   font-size:36px; line-height:48px;
   -webkit-border-radius: 100px;
   border-radius: 100px;
   -moz-border-radius:100px;
   -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;  
-  -webkit-box-shadow: 0px 2px 0px 0px #3e9b20;
-  -moz-box-shadow: 0px 2px 0px 0px #3e9b20;
-    box-shadow: 0px 2px 0px 0px #3e9b20;
-  text-shadow: 0px 1px #3e9b20;
+  -webkit-box-shadow: 0px 2px 0px 0px @ffGreen;  //#3e9b20
+  -moz-box-shadow: 0px 2px 0px 0px @ffGreen;
+    box-shadow: 0px 2px 0px 0px @ffGreen;
+  text-shadow: 0px 1px @ffGreen;
 }
 
 #cta a:hover{ text-decoration:none;}
@@ -94,8 +98,9 @@ body {
 #success a:hover {text-decoration: none; color: @ffBrownGrayish; }
 #success h4 {font-size: 24px; line-height: 36px; font-weight: 400; }
 #success h4 a {font-weight: 700;}
-#success p {margin-top: 20px; font-weight: 400; font-family: "Ubuntu Condensed", serif; }
-#success p a { color: @ffGreen; }
+#success p {margin-top: 20px; font-size: 18px; font-weight: 400; font-family: "Ubuntu Condensed", serif; }
+#success p a { padding: 0 10px;}
+#success p a i { font-size: 24px; color: @gray; }
 
 
 
@@ -116,12 +121,13 @@ body {
 /*** FOOTER ****/
 #footer{margin-top:10px; text-align:center; background:url(/img/footer-divider.png) repeat-x top; padding-top:30px;}
 #footer h4{ margin:0 0 20px;font-size:14px; font-family: 'Ubuntu Condensed', serif; line-height:24px; font-weight:400;}
-#footer h4 i{ font-size:10px; margin: 0 10px; color: @ffBrown;}
-
-.footericon{ color:#7abe63; font-size:36px; margin-bottom:15px;}
-.footericon a{ color:#7abe63;}
-.footericon a:hover{ color:#3e9b20; text-decoration:none;}
+#footer h4 i{ font-size:10px; margin: 0 10px; color: @ffGreen;}
 #footer p{ font-size:10px; font-weight:400;}
+
+
+//.footericon{ color:#7abe63; font-size:36px; margin-bottom:15px;}
+//.footericon a{ color:#7abe63;}
+//.footericon a:hover{ color:#3e9b20; text-decoration:none;}
 
 
 

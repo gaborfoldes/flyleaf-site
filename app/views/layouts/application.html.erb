@@ -42,7 +42,19 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="/js/jquery-1.8.3.min.js"></script>
-    <script src="/js/bootstrap.js"></script> 
+    <!--script src="/js/bootstrap.js"></script--> 
+    <script src="/js/jquery.zclip.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $('a#copy-clip').zclip({
+            path: '/js/ZeroClipboard.swf',
+            copy: function(){return $(this).attr('booklink');},
+            afterCopy: function() {}
+        });
+      })
+    </script>
+
 
     <!-- Google Analytics -->
     <script type="text/javascript">

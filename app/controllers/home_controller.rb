@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
   def index
+#    @api_url = 'http://localhost:3001'
+#    @book_link = 'warpeace'
   end
 
   def upload

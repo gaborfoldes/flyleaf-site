@@ -1,11 +1,31 @@
       <div class="row" id="success">
-      	<div class="span12">
-      	  <h2>Success!</h2>
-      	  <h4>
-      	  	Read your book at:
-      	  	<%= link_to "flyle.af/" + @book_link, @api_url + "/view/" + @book_link, :target => '_blank' %>
-      	  </h4>
-      	  <p><%= link_to "Upload another book", :home_index %></p>
+        <div class="span12">
+          <h2>Success!</h2>
+          <h4>
+          	Read your book at:
+          	<%= link_to "flyle.af/" + @book_link, @api_url + "/view/" + @book_link, :target => '_blank' %>
+          </h4>
+          <p>
+            <%= link_to "http://www.facebook.com/sharer.php?u=http://flyle.af/" + @book_link, :target => '_blank' do %>
+              <i class="icon-facebook-sign"></i>
+              Share on Facebook
+            <% end %>
+            <%= link_to "http://twitter.com/share?text=Check%20out%20my%20book%20on%20Flyleaf&url=http://flyle.af/" + @book_link, :target => '_blank' do %>
+              <i class="icon-twitter-sign"></i>
+              Tweet it
+            <% end %>
+            <%= link_to "mailto:?subject=Check%20out%20my%20book%20on%20Flyleaf&body=Read%20at%20http://flyle.af/" + @book_link do %>
+              <i class="icon-envelope-alt"></i>
+              Email it
+            <% end %>
+            <%= link_to "#", :id => "copy-clip", :booklink => "flyle.af/" + @book_link do %>
+              <i class="icon-copy"></i>
+              Copy to clipboard
+            <% end %>
+
+          </p>
         </div><!--end span12-->        
       </div><!--end row-->
-      
+
+
+
