@@ -1,58 +1,63 @@
 	<div class="container">
 
 	  <div class="row top-bar">
-		<div class="span12">
-		  <%= link_to image_tag("/img/flyleaf_logo.png"), :home_index %>
-		</div>
-      </div>
+		  <div class="span12">
+		    <%= link_to image_tag("/img/flyleaf_logo_large.png"), :home_index %>
+		  </div>
+    </div>
 
       
-      <div class="row" id="maincontent">
-      	<div class="span12">
-          <h2>Share your book &amp; connect with your readers</h2>        
-          <p>You wrote the most amazing story and want to share it with the world?</p>
-          <p>Flyleaf gives you an easy way to distribute your book and reach your readers.</p>        
-        </div><!--end span12-->            
-      </div><!--end row-->
-      
-      <%= render "upload_form" unless @book_link %>
-      <%= render "result_box" if @book_link %>
-
-      <div class="row" id="features">
-      	<div class="span3 divider">
-        	<div class="featureicon"><i class="icon-book"></i></div>
-            <h3>Upload your book</h3>
-            <p>Upload from your computer any book in <strong>EPUB&reg;</strong> format you want to share.  Only share your own work.</p>
-        </div>        
-        <div class="span3 divider">
-        	<div class="featureicon"><i class="icon-external-link"></i></div>
-            <h3>Get a link</h3>
-            <p>Get a short, unique link to your book that your readers can use to access it at any time, anywhere.</p>
-        </div>       
-        <div class="span3 divider">
-        	<div class="featureicon"><i class="icon-envelope"></i></div>
-            <h3>Send to your readers</h3>
-            <p>Share your link with your readers through email, Facebook, Twitter or a message in a bottle.  It's simple.</p>
-        </div>
-         <div class="span3">
-        	<div class="featureicon"><i class="icon-tablet"></i></div>
-            <h3>Read on any device</h3>
-            <p>Your readers can enjoy reading your book on any device &mdash; no need to download or store anything.</p>
-        </div>
-      </div><!--end row-->
-      
-      <div class="row" id="footer">
-        <h4>
-          About <i class="icon-leaf"></i>
-          Privacy <i class="icon-leaf"></i>
-          Terms <i class="icon-leaf"></i>
-          Copyright <i class="icon-leaf"></i>
-          Contact
-        </h4>
-        <!--div class="footericon"><a href="https://twitter.com/madebyraj"><i class="icon-twitter-sign"></i></a></div-->
-        <p>&copy;2013 Flyleaf. All rights reserved.</p>
-      </div><!--end row-->      
-    </div><!--end container-->     
+   <div class="row" id="maincontent">
+   	<div class="span12">
+       <h2>Share your book with the world</h2>
+       <p>The easiest way to distribute your book and reach new readers.</p>        
+     </div><!--end span12-->            
+   </div><!--end row-->
+   
+   <%= render "upload_form" unless @book_link %>
+   <%= render "result_box" if @book_link %>
+    
+   <div class="row" id="features">
+   	<div class="span3 divider">
+     	<div class="featureicon"><i class="icon-book"></i></div>
+         <h3>Upload your book</h3>
+         <p>
+           Upload any book you want to share in <strong>EPUB&reg;</strong> format.
+           If you need to convert, try <%= link_to "Calibre", "http://calibre-ebook.com/", :target => "_blank" %>.
+           Only share your own work!
+         </p>
+     </div>        
+     <div class="span3 divider">
+     	<div class="featureicon"><i class="icon-external-link"></i></div>
+         <h3>Get a link</h3>
+         <p>Get a short, unique link to your book that your readers can use to access it at any time, anywhere.</p>
+     </div>       
+     <div class="span3 divider">
+     	<div class="featureicon"><i class="icon-envelope"></i></div>
+         <h3>Share with your readers</h3>
+         <p>Share your link with your readers through email, Facebook, Twitter or a message in a bottle.  It's simple.</p>
+     </div>
+      <div class="span3">
+     	<div class="featureicon"><i class="icon-tablet"></i></div>
+         <h3>Read online</h3>
+         <p>Your readers can enjoy your book on any device &mdash; no need to download anything.
+           See for yourself: <%= link_to 'flyle.af/warpeace', 'http://flyle.af/warpeace', :target => '_blank' %>
+         </p>
+     </div>
+   </div><!--end row-->
+   
+   <div class="row" id="footer">
+     <h4>
+       About <i class="icon-leaf"></i>
+       Privacy <i class="icon-leaf"></i>
+       Terms <i class="icon-leaf"></i>
+       Copyright <i class="icon-leaf"></i>
+       Contact
+     </h4>
+     <!--div class="footericon"><a href="https://twitter.com/madebyraj"><i class="icon-twitter-sign"></i></a></div-->
+     <p>&copy;2013 Flyleaf. All rights reserved.</p>
+   </div><!--end row-->      
+ </div><!--end container-->     
 
 
 
