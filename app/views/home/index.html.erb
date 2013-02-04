@@ -7,45 +7,60 @@
     </div>
 
       
-   <div class="row" id="maincontent">
-   	<div class="span12">
-       <h2>Share your book with the world</h2>
-       <p>The easiest way to distribute your book and reach new readers.</p>        
-     </div><!--end span12-->            
-   </div><!--end row-->
-   
-   <%= render "upload_form" unless @book_link %>
-   <%= render "result_box" if @book_link %>
+    <div class="row" id="maincontent">
+    	<div class="span12">
+        <h2>Share your book with the world</h2>
+        <p>The easiest way to distribute your book and reach new readers.</p>        
+      </div><!--end span12-->            
+    </div><!--end row-->
     
-   <div class="row" id="features">
-   	<div class="span3 divider">
-     	<div class="featureicon"><i class="icon-book"></i></div>
-         <h3>Upload your book</h3>
-         <p>
-           Upload any book you want to share in <strong>EPUB&reg;</strong> format.
-           If you need to convert, try <%= link_to "Calibre", "http://calibre-ebook.com/", :target => "_blank" %>.
-           Only share your own work!
-         </p>
-     </div>        
-     <div class="span3 divider">
-     	<div class="featureicon"><i class="icon-external-link"></i></div>
-         <h3>Get a link</h3>
-         <p>Get a short, unique link to your book that your readers can use to access it at any time, anywhere.</p>
-     </div>       
-     <div class="span3 divider">
-     	<div class="featureicon"><i class="icon-envelope"></i></div>
-         <h3>Share with your readers</h3>
-         <p>Share your link with your readers through email, Facebook, Twitter or a message in a bottle.  It's simple.</p>
-     </div>
-      <div class="span3">
-     	<div class="featureicon"><i class="icon-tablet"></i></div>
-         <h3>Read online</h3>
-         <p>Your readers can enjoy your book on any device &mdash; no need to download anything.
-           See for yourself: <%= link_to 'flyle.af/warpeace', 'http://flyle.af/warpeace', :target => '_blank' %>
-         </p>
-     </div>
-   </div><!--end row-->
-   
+    <%= render "upload_form" unless @book_link %>
+    <%= render "result_box" if @book_link %>
+     
+    <div class="row" id="features">
+    	<div class="span3 divider">
+      	<div class="featureicon"><i class="icon-book"></i></div>
+          <h3>Upload your book</h3>
+          <p>
+            Upload any book you want to share in <strong>EPUB&reg;</strong> format.
+            If you need to convert, try <%= link_to "Calibre", "http://calibre-ebook.com/", :target => "_blank" %>.
+            Only share your own work!
+          </p>
+      </div>        
+      <div class="span3 divider">
+      	<div class="featureicon"><i class="icon-external-link"></i></div>
+          <h3>Get a link</h3>
+          <p>Get a short, unique link to your book that your readers can use to access it at any time, anywhere.</p>
+      </div>       
+      <div class="span3 divider">
+      	<div class="featureicon"><i class="icon-envelope"></i></div>
+          <h3>Share with your readers</h3>
+          <p>Share your link with your readers through email, Facebook, Twitter or a message in a bottle.  It's simple.</p>
+      </div>
+       <div class="span3">
+      	<div class="featureicon"><i class="icon-tablet"></i></div>
+          <h3>Read online</h3>
+          <p>Your readers can enjoy your book on any device &mdash; no need to download anything.
+            See for yourself: <%= link_to 'flyle.af/warpeace', 'http://flyle.af/warpeace', :target => '_blank' %>
+          </p>
+      </div>
+    </div><!--end row-->
+  </div><!--end container-->     
+
+  <div id="books-container">
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <h4>Most recent books</h4>
+          <% for @book in @books do %>
+            <%= render "book_tombstone" %>
+          <% end %>
+        </div>
+      </div><!--end row-->
+    </div><!--end container-->     
+  </div>
+
+  <div class="container">
    <div class="row" id="footer">
      <h4>
        About <i class="icon-leaf"></i>
@@ -55,7 +70,7 @@
        Contact
      </h4>
      <!--div class="footericon"><a href="https://twitter.com/madebyraj"><i class="icon-twitter-sign"></i></a></div-->
-     <p>&copy;2013 Flyleaf. All rights reserved.</p>
+     <p>&copy;2013 flyleaf. &nbsp;&nbsp;&nbsp;All rights reserved.</p>
    </div><!--end row-->      
  </div><!--end container-->     
 

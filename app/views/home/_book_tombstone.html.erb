@@ -1,0 +1,27 @@
+<div class="browse_grid_item">
+	<div class="browse_grid_item_shadow"></div>
+	<!--div class="lateral_nav_placeholder"></div-->
+	<%= link_to @api_url + "/view/" + @book["id"], :class => "browse_grid_card", :target => "_blank" do %>
+		<div class="author_line"><%= @book["creator"] %></div>
+		<div class="cover_art_container">
+			<div style="background: transparent url('http://reader.flyleaf.me/view/<%= @book["id"] %>/apple-touch-icon-114x114-precomposed.png') no-repeat center center;" class="cover_art appear"></div>
+		</div>
+		<div class="title_line"><%= @book["title"] %></div>
+		<div class="cover_overlay">
+			<div class="overlay_author">
+				<div class="overlay_white_triangle"></div>
+				<div class="overlay_dark_triangle"></div>
+				<div class="overlay_author_inner"><%= @book["creator"] %></div>
+			</div>
+			<div class="overlay_details">
+				<div class="overlay_background"></div>
+				<!--div class="overlay_title_line"></div>
+				<div class="overlay_subtitle_line"></div-->
+				<div class="buy_call_to_action">Start reading &rarr;</div>
+			</div>
+			<div class="overlay_title">
+				<div class="overlay_title_inner"><%= @book["title"] %></div>
+			</div>
+		</div>
+	<% end %>
+</div>
