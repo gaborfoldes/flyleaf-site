@@ -1,7 +1,38 @@
 class HomeController < ApplicationController
+
   def index
-#    @api_url = 'http://localhost:3001'
-#    @book_link = 'warpeace'
+
+    require 'net/http'
+    require 'securerandom'
+    require 'fileutils'
+
+    if Rails.env.development?
+      @api_url = 'http://localhost:3001'
+    else
+      @api_url = 'http://reader.flyleaf.me'
+    end
+
+    url = URI.parse(@api_url + '/search')
+    req = Net::HTTP::Get.new(url.path)
+    res = Net::HTTP.start(url.host, url.port) {|http|
+      http.request(req)
+    }
+    booklist = ActiveSupport::JSON.decode(res.body)
+
+    @books = []
+    booklist.each do |bookid|
+      url = URI.parse(@api_url + '/search/' + bookid)
+      req = Net::HTTP::Get.new(url.path)
+      res = Net::HTTP.start(url.host, url.port) {|http|
+        http.request(req)
+      }
+      bookinfo = ActiveSupport::JSON.decode(res.body)[bookid]
+      bookinfo["id"] = bookid
+      @books.unshift(bookinfo)
+    end
+
+    render :index
+
   end
 
   def upload
