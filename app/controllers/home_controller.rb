@@ -63,13 +63,9 @@ class HomeController < ApplicationController
       http.request(req)
     }
 
-#    if res.body == 'OK' 
-#      @book_link = shortened
-#    else
-#      @error_code = "Failed to upload book!"
-#    end
-
     @book_link = shortened
+    @books = []
+
     render :index
 
   end
